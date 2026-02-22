@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Green Haven</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #e8f5e9, #c8e6c9);
+      color: #2e7d32;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background: white;
+      padding: 3rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .container img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #1b5e20;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #388e3c;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1.8rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #43a047;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #66bb6a;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #4e944f;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Thank You Icon">
+    <h1>Thank You for Choosing Green Haven! 🌿</h1>
+    <p>
+      Your order has been successfully received. Our team is processing it and will contact you shortly 
+      to confirm your delivery details. <br><br>
+      We truly appreciate your trust in us and hope our plants bring life and freshness to your space.
+    </p>
+    <a href="index.html" class="btn">← Back to Home</a>
+    <footer>© <span id="year"></span> Green Haven | Nurturing Nature, One Plant at a Time</footer>
+  </div>
+
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Haven | Plant Care & Delivery Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8fff8;
+    }
+header {
+  background-color: #2e7d32; /* green background */
+  padding: 1.5rem 2rem;
+  color: white;
+  position: relative;
+}
+   .header-content {
+  display: flex;
+  align-items: flex-end; /* aligns the inner white box bottom */
+  justify-content: space-between;
+  position: relative;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 150px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.logo-container h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+/* INNER WHITE BOX FOR NAVIGATION */
+.inner-nav {
+  background: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px 10px 0 0; /* rounded top only */
+  margin-left: 1.5rem;
+  align-self: flex-end; /* aligns the nav box bottom with the header bottom */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  height: 100%; /* ensures full vertical stretch */
+}
+
+
+.inner-nav nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.inner-nav nav a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.inner-nav nav a:hover {
+  text-decoration: underline;
+  color: #388e3c;
+}
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hero {
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=60') no-repeat center/cover;
+      color: white;
+      padding: 6rem 2rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    .btn {
+      display: inline-block;
+      background: #43a047;
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border-radius: 25px;
+      margin-top: 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #66bb6a;
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 180px;
+      object-fit: cover;
+    }
+    details {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      background: #2e7d32;
+      color: white;
+      padding: 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    label {
+      font-weight: 600;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    button {
+      background: #43a047;
+      color: white;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #66bb6a;
+    }
+
+#shop {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f5f9f6;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.card h3 {
+  margin-top: 15px;
+  color: #2d4739;
+}
+
+.card p {
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #2d4739;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3d5c4d;
+}
+
+/* PAYMENT SECTION */
+#payments {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f1f8f4;
+}
+
+#payments h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+#payments p {
+  color: #4e944f;
+  margin-bottom: 40px;
+}
+
+.payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.method {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.method:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.method img {
+  width: 80px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.method h3 {
+  color: #1b5e20;
+  margin-bottom: 8px;
+}
+
+/* TESTIMONIALS SECTION */
+#testimonials {
+  padding: 80px 20px;
+  background: #f8fff8;
+  text-align: center;
+}
+
+#testimonials h2 {
+  color: #2e7d32;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#testimonials p {
+  color: #4e944f;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-8px);
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #2e7d32;
+}
+
+.testimonial h3 {
+  color: #1b5e20;
+  margin-bottom: 8px;
+}
+
+.testimonial p {
+  font-style: italic;
+  color: #555;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+  <div class="header-content">
+    <div class="logo-container">
+      <img src="haven-logo.png" alt="Green Haven Logo" class="logo">
+      <h1>🌿 Green Haven Plant Care</h1>
+    </div>
+    
+    <div class="inner-nav">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#tips">Plant Care Tips</a></li>
+          <li><a href="#delivery">Delivery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+ <section id="home" class="hero">
+  <h2>Your One-Stop Destination for Healthy, Happy Plants</h2>
+  <p style="color: black; background-color: rgba(000,000,000,0.0); padding: 10px; border-radius: 8px;">
+    At Green Haven, we bring nature to your doorstep with premium-quality plants and personalized care services. 
+    Whether you’re a plant lover or just starting your green journey, we’ll guide you every step of the way.
+  </p>
+  <a href="#shop" class="btn">Shop Now</a>
+</section>
+
+
+  <!-- SHOP -->
+<section id="shop">
+    <h2>Shop Our Collection</h2>
+    <p>Explore our wide range of indoor and outdoor plants, pots, and accessories — all carefully curated to thrive in your home or office.</p>
+
+<div class="products">
+<div class="card"><img src="i1.jpeg" alt="Peace Lily"><h3>Peace Lily</h3><p>Perfect for purifying air and brightening indoor spaces.</p><p><strong>$15</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i2.jpeg" alt="Succulent Set"><h3>Succulent Set</h3><p>Low maintenance plants ideal for desks and small spaces.</p><p><strong>$10</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i3.jpeg" alt="Monstera Deliciosa"><h3>Monstera Deliciosa</h3><p>Elegant tropical plant with iconic split leaves.</p><p><strong>$25</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i4.jpeg" alt="Snake Plant"><h3>Snake Plant</h3><p>Elegant, tough, and perfect for low-light rooms.</p><p><strong>$18</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i5.jpeg" alt="Spider Plant"><h3>Spider Plant</h3><p>Air-purifying plant with striped green-white leaves.</p><p><strong>$12</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i6.jpeg" alt="ZZ Plant"><h3>ZZ Plant</h3><p>Low-maintenance plant with glossy green leaves.</p><p><strong>$22</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i7.jpeg" alt="Aloe Vera"><h3>Aloe Vera</h3><p>Healing plant great for skin and easy to care for.</p><p><strong>$10</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i8.jpeg" alt="Fiddle Leaf Fig"><h3>Fiddle Leaf Fig</h3><p>A statement indoor tree with large, lush leaves.</p><p><strong>$35</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i9.jpeg" alt="Pothos"><h3>Pothos</h3><p>Fast-growing vine that thrives in indirect light.</p><p><strong>$14</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i10.jpeg" alt="Rubber Plant"><h3>Rubber Plant</h3><p>Glossy, elegant leaves ideal for any living space.</p><p><strong>$25</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i11.jpeg" alt="Calathea Orbifolia"><h3>Calathea Orbifolia</h3><p>Striking striped leaves for a tropical feel.</p><p><strong>$20</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i12.jpeg" alt="Jade Plant"><h3>Jade Plant</h3><p>Symbol of prosperity and long life.</p><p><strong>$15</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i13.jpeg" alt="Areca Palm"><h3>Areca Palm</h3><p>Lush indoor palm for a tropical atmosphere.</p><p><strong>$28</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i14.jpeg" alt="Boston Fern"><h3>Boston Fern</h3><p>Classic fern that thrives in humidity.</p><p><strong>$17</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i15.jpeg" alt="Chinese Money Plant"><h3>Chinese Money Plant</h3><p>Round leaves and modern minimalist look.</p><p><strong>$16</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i16.jpeg" alt="Philodendron Heartleaf"><h3>Philodendron Heartleaf</h3><p>Fast-growing vine with heart-shaped leaves.</p><p><strong>$15</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i17.jpeg" alt="Lavender"><h3>Lavender</h3><p>Fragrant herb that promotes calm and relaxation.</p><p><strong>$12</strong></p><a href="#contact" class="btn">Order Now</a></div>
+<div class="card"><img src="i18.jpeg" alt="Peace Fern"><h3>Peace Fern</h3><p>Wavy leaves that add charm and texture indoors.</p><p><strong>$19</strong></p><a href="#contact" class="btn">Order Now</a></div>
+</div>
+</section>
+
+<!-- other sections remain unchanged -->
+  <!-- PLANT CARE TIPS -->
+  <section id="tips">
+    <h2>Plant Care Tips</h2>
+    <p>Our expert plant care guides will help your greens thrive all year round. Learn how to water, prune, and repot your plants like a pro.</p>
+    <ul>
+      <li><strong>Water Wisely:</strong> Most plants prefer consistent moisture but not soggy soil. Check soil before watering.</li>
+      <li><strong>Sunlight Needs:</strong> Know your plant’s preference — bright, indirect light is safest for most houseplants.</li>
+      <li><strong>Fertilizing:</strong> Feed your plants monthly during the growing season with organic fertilizer.</li>
+      <li><strong>Pest Control:</strong> Inspect leaves regularly for pests like aphids or spider mites and use natural remedies.</li>
+      <li><strong>Repotting:</strong> Every 6–12 months, give your plant fresh soil and more space to grow.</li>
+    </ul>
+  </section>
+
+  <!-- DELIVERY SERVICES -->
+  <section id="delivery">
+    <h2>Delivery Services</h2>
+    <p>We deliver happiness — one plant at a time. Our delivery process ensures your plants arrive healthy, fresh, and ready to brighten your space.</p>
+    <ul>
+      <li><strong>Same-Day Delivery:</strong> Orders placed before 2 PM are delivered within the same day within Nairobi.</li>
+      <li><strong>Eco-Friendly Packaging:</strong> All deliveries are made using recyclable materials.</li>
+      <li><strong>Delivery Zones:</strong> Nairobi, Thika, Kiambu, and Machakos regions.</li>
+      <li><strong>Tracking & Support:</strong> Receive live updates on your order status and delivery time.</li>
+    </ul>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="about">
+    <h2>About Green Haven</h2>
+    <p>Green Haven was founded on the belief that everyone deserves a little green in their lives. We’re a passionate team of horticulturists, delivery experts, and designers committed to spreading the joy of plants across Kenya.</p>
+    <p>Our mission is simple — to make plant ownership accessible, enjoyable, and sustainable. From sourcing locally-grown plants to providing continuous support, we ensure that every customer feels confident nurturing their greens.</p>
+    <p><em>“Growing together, one plant at a time.”</em></p>
+  </section>
+
+<!-- PAYMENT METHODS -->
+<section id="payments">
+  <h2>Secure Payment Options</h2>
+  <p>We offer safe and convenient payment methods for all our customers worldwide.</p>
+
+  <div class="payment-methods">
+    <div class="method">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+      <h3>PayPal</h3>
+      <p>Pay securely using your PayPal account or linked cards.</p>
+    </div>
+
+    <div class="method">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Card Payment">
+      <h3>Credit/Debit Cards</h3>
+      <p>We accept Visa, MasterCard, and other major cards.</p>
+    </div>
+
+    <div class="methods">
+    <div class="method">
+      <img src="https://cdn-icons-png.flaticon.com/512/349/349228.png" alt="M-Pesa">
+      <h3>M-Pesa</h3>
+      <p>Make payments directly from your phone with M-Pesa (for Kenya customers).</p>
+    </div>
+
+    <div class="method">
+      <img src="https://cdn-icons-png.flaticon.com/512/1490/1490872.png" alt="Bank Transfer">
+      <h3>Bank Transfer</h3>
+      <p>Directly deposit to our official Green Haven bank account.</p>
+    </div>
+
+    <div class="method">
+      <img src="https://cdn-icons-png.flaticon.com/512/179/179457.png" alt="Credit Card">
+      <h3>Credit / Debit Card</h3>
+      <p>Pay securely using Visa, Mastercard, or other supported cards.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+ <!-- Include Flutterwave JS once (if not already included) -->
+<script src="https://checkout.flutterwave.com/v3.js"></script>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Order & Contact Form</h2>
+  <p>Fill out the form below to confirm your order and provide payment details. Our team will contact you to arrange delivery.</p>
+
+  <form action="submit.php" method="POST">
+    <label>Payment Message:</label>
+    <input type="text" name="payment_message" placeholder="Enter payment transaction message" required>
+
+    <label>Full Name:</label>
+    <input type="text" name="full_name" placeholder="Your full name" required>
+
+    <label>Phone Number:</label>
+    <input type="tel" name="phone" placeholder="+254 712 345 678" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="you@example.com" required>
+
+    <label>Delivery Address:</label>
+    <textarea name="address" rows="3" placeholder="Enter delivery location details" required></textarea>
+
+    <label>Order Details:</label>
+    <textarea name="order_details" rows="3" placeholder="E.g., 2 Monstera plants, 1 Peace Lily" required></textarea>
+
+    <button type="submit">Submit Order</button>
+  </form>
+
+  <p><strong>Email:</strong> info@greenhaven.co.ke</p>
+  <p><strong>Phone:</strong> +254 712 345 678</p>
+</section>
+<section id="testimonials">
+  <h2>What Our Customers Say</h2>
+  <p>Our happy customers share their experience with Green Haven Plant Care & Delivery Services.</p>
+
+  <div class="testimonial-container">
+    <div class="testimonial">
+      <img src="i19.jpg" alt="Customer 1">
+      <h3>Grace Wambui</h3>
+      <p>“Green Haven transformed my balcony into a mini garden! Their delivery and care tips were amazing.”</p>
+    </div>
+
+    <div class="testimonial">
+      <img src="i20.jpg" alt="Customer 2">
+      <h3>Michael Otieno</h3>
+      <p>“Excellent service! My Monstera arrived healthy and thriving. I love how easy it is to order.”</p>
+    </div>
+
+    <div class="testimonial">
+      <img src="i21.jpg" alt="Customer 3">
+      <h3>Faith Njeri</h3>
+      <p>“Their team is super friendly, and the plants are top-quality. Green Haven is my go-to plant shop!”</p>
+    </div>
+  </div>
+</section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>How long does delivery take?</summary>
+      <p>Same-day delivery for Nairobi if ordered before 2 PM. Others are delivered the next day.</p>
+    </details>
+    <details>
+      <summary>Can I return a plant if it arrives damaged?</summary>
+      <p>Yes! Contact us within 24 hours with a photo, and we’ll replace it for free.</p>
+    </details>
+    <details>
+      <summary>Do you deliver outside Nairobi?</summary>
+      <p>Currently, we deliver to Nairobi, Thika, Kiambu, and Machakos.</p>
+    </details>
+    <details>
+      <summary>How do I know which plant suits my space?</summary>
+      <p>Check our Plant Care Tips section or message our experts for free consultation.</p>
+    </details>
+  </section>
+
+<footer>
+  <p>© <span id="year"></span> Green Haven | All Rights Reserved</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+  const innerHeader = document.getElementById('innerHeader');
+
+  window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero');
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    if (window.scrollY > heroBottom - 100) {
+      innerHeader.style.display = 'block';
+    } else {
+      innerHeader.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>
